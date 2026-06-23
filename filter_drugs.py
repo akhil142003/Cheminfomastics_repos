@@ -79,11 +79,11 @@ def sorted_compounds(light_compounds, heavy_compounds):
     #sorted by weight
     all_drugs = {**light_compounds, **heavy_compounds} # merges both dictionary
     sort_drugs = sorted(all_drugs.items(), key=lambda x: x[1])
-    with open('sorted_compounds.txt','w') as fi:
+    with open('sorted_drugs.txt','w') as fi:
         fi.write('Sorted Compounds list\n')
         fi.write('-' * 40 + '\n')
         for name, weight in sort_drugs:
-            fi.write(f'{name} : {weight:.2f} g/mol')
+            fi.write(f'{name} : {weight:.2f} g/mol\n')
 
 
 
@@ -122,7 +122,7 @@ def main():
 
     threshold =300
 
-    print(f"Processing {filename}....")
+    print(f"Processing : {filename}....")
     light, heavy = molecular_weight_filter(filename,threshold)
 
     if light is None or heavy is None:
@@ -130,17 +130,17 @@ def main():
 
     save_results(light, heavy, threshold)
 
-    print(f"\n Complete!")
+    print(f"Complete!")
     print(f"Light Compounds (<{threshold} g/mol): {len(light)}")
     print(f"Heavy Compounds (>={threshold} g/mol): {len(heavy)}")
-    print("\n Check 'light_drugs.txt' and 'heavy_drugs.txt' for results.")
-    print("\n Check 'sorted_compounds.txt' for sorted list of compounds.")
+    print("\nCheck 'light_drugs.txt' and 'heavy_drugs.txt' for results.")
+    print("Check 'sorted_drugs.txt' for sorted list of compounds.")
 
-    print("="*50)
+    print("="*50 + '\n')
     sorted_compounds(light, heavy)
     heaviest_lightest_compounds(light, heavy)
     average_of_weight(light, heavy)
-    print("Analysis complete")
+    print("-----------Analysis complete----------")
 
 if __name__ == "__main__":
     main()

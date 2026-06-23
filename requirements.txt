@@ -1,0 +1,7 @@
+# Molecular Weight Filter - Requirements
+# No external dependencies
+# Use only Python built - in modules:
+# csv
+# sys
+
+# To run this program you only need Python 3.x installed.

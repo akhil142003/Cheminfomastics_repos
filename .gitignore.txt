@@ -1,0 +1,27 @@
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Output files (don't upload your results)
+*.txt
+*.csv
+*.xlsx
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Log files
+*.log
