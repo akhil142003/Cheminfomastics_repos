@@ -116,7 +116,7 @@ def main():
     if len(sys.argv) > 1:
         filename = sys.argv[1]
     else:
-        filename = input("Enter the CSV filename : ")
+        filename = input("Enter the CSV filename with path : ")
 
     filename = filename.strip().strip('"').strip("'")
 
