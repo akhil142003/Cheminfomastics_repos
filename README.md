@@ -5,7 +5,7 @@ A Python tool that processes PubChem CSV files and separates chemical compounds 
 ## Features
 
 - Reads PubChem CSV files
-- Filters compounds by nolecular weight (default : 300 g/mol)
+- Filters compounds by molecular weight (default : 300 g/mol)
 - Saves results to text files
 - Shows sorted compounds, heaviest/lightest and average weight
 - Handles errors gracefully
